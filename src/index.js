@@ -18,8 +18,4 @@ app.use(taskRouter);
 
 app.listen(port, () => {
     console.log("Server is running at " + port);
-});
-
-//token = header.payload.signature--base64decode.org
-
-//middleware-- neqw request-->run a function or something---> new route handler
+})

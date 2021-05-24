@@ -90,8 +90,7 @@ userSchema.statics.findByCredentials = async(email, password) => {
     return user;
 }
 
-//hash the password before the user is saved
-userSchema.pre('save', async function(next) { //should not be arrow functions but only standard function
+userSchema.pre('save', async function(next) {
     const user = this
 
     if (user.isModified('password')) {
@@ -100,17 +99,6 @@ userSchema.pre('save', async function(next) { //should not be arrow functions bu
     next()
 })
 
-// //delete tasks if user is deleted
-// userSchema.pre('remove', async function (next) {
-//     const user = this
-
-//     await Task.deleteMany({ owner: user._id })
-//     next();
-// })
-
 const User = mongoose.model('User', userSchema);
 
-
 module.exports = User
-
-//middleware : save,validate ,do something before the user is saved
