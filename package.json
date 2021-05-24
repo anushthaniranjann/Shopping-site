@@ -8,7 +8,7 @@
         "dev": "nodemon src/index.js"
     },
     "keywords": [],
-    "author": "Anushtha Patel, Shreya Maheshwari",
+    "author": "Anushtha Patel",
     "license": "ISC",
     "dependencies": {
         "@sendgrid/mail": "^7.4.0",
